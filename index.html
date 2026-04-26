@@ -1686,7 +1686,7 @@
                         <div class="tech-panel-media">
                             <div class="tech-video-container"
                                 style="height: 100%; border-radius: var(--radius-md); overflow: hidden; background: #000;">
-                                <video autoplay muted loop playsinline
+                                <video autoplay muted loop playsinline class="tech-video"
                                     style="width: 100%; height: 100%; object-fit: cover;">
                                     <source src="public/3Dmaps.mp4" type="video/mp4">
                                 </video>
@@ -1710,7 +1710,7 @@
                         <div class="tech-panel-media">
                             <div class="tech-video-container"
                                 style="height: 100%; border-radius: var(--radius-md); overflow: hidden; background: #000;">
-                                <video autoplay muted loop playsinline
+                                <video autoplay muted loop playsinline class="tech-video"
                                     style="width: 100%; height: 100%; object-fit: cover;">
                                     <source src="public/360vid.mp4" type="video/mp4">
                                 </video>
@@ -1734,7 +1734,7 @@
                         <div class="tech-panel-media">
                             <div class="tech-video-container"
                                 style="height: 100%; border-radius: var(--radius-md); overflow: hidden; background: #000;">
-                                <video autoplay muted loop playsinline
+                                <video autoplay muted loop playsinline class="tech-video"
                                     style="width: 100%; height: 100%; object-fit: cover;">
                                     <source src="public/AIChatBot.mp4" type="video/mp4">
                                 </video>
@@ -1758,7 +1758,7 @@
                         <div class="tech-panel-media">
                             <div class="tech-video-container"
                                 style="height: 100%; border-radius: var(--radius-md); overflow: hidden; background: #000;">
-                                <video autoplay muted loop playsinline
+                                <video autoplay muted loop playsinline class="tech-video"
                                     style="width: 100%; height: 100%; object-fit: cover;">
                                     <source src="public/Ui.MP4" type="video/mp4">
                                 </video>
@@ -2508,31 +2508,25 @@
                 });
             });
 
-            // Stabilized Mascot Reveal/Hide Logic
+            // STRICT Mascot Reveal/Hide Logic (Only for Mockups Section)
             const mascot = document.querySelector('.mascot-widget');
             const previewSection = document.querySelector('#preview');
-            const footer = document.querySelector('footer');
 
             if (mascot && previewSection) {
                 const mascotObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
-                        const isAtPreview = entry.target === previewSection && entry.isIntersecting;
-                        const isAtFooter = entry.target === footer && entry.isIntersecting;
-
-                        if (isAtPreview && !isAtFooter) {
+                        // Only visible if Mockups section is actively on screen
+                        if (entry.isIntersecting) {
                             mascot.classList.add('visible');
-                        } else if (isAtFooter) {
+                        } else {
                             mascot.classList.remove('visible');
                         }
                     });
                 }, { threshold: 0.1 });
 
                 mascotObserver.observe(previewSection);
-                if (footer) mascotObserver.observe(footer);
                 
-                // Extra security for mobile tap
                 mascot.addEventListener('click', (e) => {
-                    // Stop any potential scroll-to-top propagation
                     e.stopPropagation();
                 });
             }

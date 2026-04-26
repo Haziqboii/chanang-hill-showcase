@@ -551,8 +551,13 @@ function initHeroVideo() {
 
     // Autoplay Fail-safe
     const startVideo = () => {
-        video.play().catch(err => {
-            console.log("Autoplay waiting for interaction...");
+        // Play hero
+        video.play().catch(err => console.log("Autoplay waiting..."));
+        
+        // Play all tech videos
+        const techVideos = document.querySelectorAll('.tech-video');
+        techVideos.forEach(v => {
+            v.play().catch(err => {});
         });
     };
 

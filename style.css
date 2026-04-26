@@ -4447,6 +4447,12 @@ body,
 
     .tech-panel-media {
         order: -1;
+        height: 250px !important;
+        margin-bottom: var(--space-md);
+    }
+
+    .tech-video-container {
+        height: 250px !important;
     }
 }
 
