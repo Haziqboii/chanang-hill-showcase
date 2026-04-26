@@ -7571,12 +7571,44 @@ i {
 }
 
 @media (max-width: 768px) {
-    .guide-cards-inner-grid {
-        grid-template-columns: 1fr;
+    /* Absolute Force for Solution Bento Grid */
+    .bento-grid, 
+    .bento-custom-grid {
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--space-md) !important;
     }
     
-    .trail-flex-row {
-        grid-template-columns: 1fr;
+    /* Ensure cards take full width */
+    .bento-large, 
+    .bento-medium, 
+    .bento-small,
+    .bento-card-tall,
+    .bento-card-medium,
+    .bento-card-small {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        width: 100% !important;
+        min-height: auto !important;
+    }
+    
+    /* Fix excessive whitespace in the platform card */
+    .bento-large .bento-card-media,
+    .bento-card-media-tall {
+        height: 200px !important;
+        flex: none !important;
+        margin: calc(var(--space-md) * -1) !important;
+        margin-bottom: var(--space-md) !important;
+    }
+    
+    /* Fix card density */
+    .bento-card {
+        padding: var(--space-md) !important;
+    }
+    
+    .bento-card-content {
+        padding: 0 !important;
     }
 }
 
