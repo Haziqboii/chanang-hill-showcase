@@ -7610,5 +7610,11 @@ i {
     .bento-card-content {
         padding: 0 !important;
     }
+
+    /* RESTORED: Guide and Trail mobile stacking */
+    .guide-cards-inner-grid,
+    .trail-flex-row {
+        grid-template-columns: 1fr !important;
+    }
 }
 
