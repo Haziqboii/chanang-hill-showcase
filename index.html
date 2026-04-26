@@ -2508,37 +2508,33 @@
                 });
             });
 
-            // Mascot Reveal/Hide Logic
+            // Stabilized Mascot Reveal/Hide Logic
             const mascot = document.querySelector('.mascot-widget');
             const previewSection = document.querySelector('#preview');
             const footer = document.querySelector('footer');
 
-            if (mascot && previewSection && footer) {
-                const revealObserver = new IntersectionObserver((entries) => {
+            if (mascot && previewSection) {
+                const mascotObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            mascot.classList.add('visible');
-                        } else {
-                            // Optional: Hide again if they scroll way back up
-                            if (window.scrollY < previewSection.offsetTop) {
-                                mascot.classList.remove('visible');
-                            }
-                        }
-                    });
-                }, { threshold: 0.1 });
+                        const isAtPreview = entry.target === previewSection && entry.isIntersecting;
+                        const isAtFooter = entry.target === footer && entry.isIntersecting;
 
-                const hideObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
+                        if (isAtPreview && !isAtFooter) {
+                            mascot.classList.add('visible');
+                        } else if (isAtFooter) {
                             mascot.classList.remove('visible');
-                        } else if (window.scrollY > previewSection.offsetTop && window.scrollY < footer.offsetTop) {
-                            mascot.classList.add('visible');
                         }
                     });
                 }, { threshold: 0.1 });
 
-                revealObserver.observe(previewSection);
-                hideObserver.observe(footer);
+                mascotObserver.observe(previewSection);
+                if (footer) mascotObserver.observe(footer);
+                
+                // Extra security for mobile tap
+                mascot.addEventListener('click', (e) => {
+                    // Stop any potential scroll-to-top propagation
+                    e.stopPropagation();
+                });
             }
         });
     </script>
