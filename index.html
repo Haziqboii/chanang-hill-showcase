@@ -1,0 +1,2537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/favicon.png">
+    <link rel="apple-touch-icon" href="public/favicon.png">
+
+    <title>Chanang Hill | Digital Authority Showcase</title>
+    <meta name="description"
+        content="Impact Digital Community Tourism (IDCT) case study showcasing the digital transformation of Chanang Hill, Keningau, Sabah — sports tourism, community empowerment, and technical innovation.">
+    <meta name="author" content="Team Beast">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="heritage.css">
+</head>
+
+<body>
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-logos">
+                <img src="public/IDCT.png" alt="IDCT" class="logo-anim logo-1">
+                <img src="public/UMS%20Logo.png" alt="UMS" class="logo-anim logo-2">
+                <img src="public/Chanang%20Hill.png" alt="Chanang Hill" class="logo-anim logo-3">
+            </div>
+            <h1 class="loader-welcome-title">Digital Transformation of Heritage<br><span>A Community-Driven
+                    Approach</span></h1>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="nav-logo-icon" title="Chanang Hill Logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 20L10 4L13 12L17 6L21 20Z" />
+                    </svg>
+                </div>
+                <div class="nav-brand-info">
+                    <span class="nav-brand-text">Chanang Hill</span>
+                    <span class="nav-brand-sub">Bukit Chanang, Keningau</span>
+                </div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <!-- Mobile Only CTA -->
+                <a href="https://chanang-hill.vercel.app/" target="_blank" class="nav-link nav-cta-link">Visit
+                    Website</a>
+
+                <!-- Genesis Chapter -->
+                <div class="nav-chapter">
+                    <span class="chapter-label">Genesis</span>
+                    <div class="chapter-links">
+                        <a href="#hero" class="nav-link active">Overview</a>
+                        <a href="#heritage" class="nav-link">The Heritage</a>
+                    </div>
+                </div>
+
+                <!-- Mission Chapter -->
+                <div class="nav-chapter">
+                    <span class="chapter-label">Mission</span>
+                    <div class="chapter-links">
+                        <a href="#challenge" class="nav-link">The Challenge</a>
+                        <a href="#experience" class="nav-link">Experience</a>
+                    </div>
+                </div>
+
+                <!-- Digital Chapter -->
+                <div class="nav-chapter">
+                    <span class="chapter-label">Digital</span>
+                    <div class="chapter-links">
+                        <a href="#solution" class="nav-link">The Solution</a>
+                        <a href="#tech" class="nav-link">Technology</a>
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                    </div>
+                </div>
+
+                <!-- Legacy Chapter -->
+                <div class="nav-chapter">
+                    <span class="chapter-label">Legacy</span>
+                    <div class="chapter-links">
+                        <a href="#voices" class="nav-link">Voices</a>
+                        <a href="#vision" class="nav-link">Vision</a>
+                        <a href="#preview" class="nav-link">Live App</a>
+                    </div>
+                </div>
+
+            </div>
+            <a href="https://chanang-hill.vercel.app/" target="_blank" class="nav-link nav-cta-link">Visit Website</a>
+
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ SECTION 1: HERO ============ -->
+    <section class="hero" id="hero">
+        <!-- Video placeholder - replace with real video -->
+        <div class="hero-video-bg">
+            <video autoplay muted loop playsinline id="heroVideo" class="hero-video-element">
+                <source src="public/IDCT%20Rev.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Video Sound Toggle (Top Right) -->
+        <button class="video-sound-toggle" id="videoSoundToggle" aria-label="Toggle Sound">
+            <div class="toggle-icon-wrap">
+                <svg class="icon-unmuted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M11 5L6 9H2v6h4l5 4V5z" />
+                    <path d="M15.54 8.46a5 5 0 010 7.07M19.07 4.93a10 10 0 010 14.14" />
+                </svg>
+                <svg class="icon-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" style="display: none;">
+                    <path d="M11 5L6 9H2v6h4l5 4V5z" />
+                    <line x1="23" y1="9" x2="17" y2="15" />
+                    <line x1="17" y1="9" x2="23" y2="15" />
+                </svg>
+            </div>
+            <span class="toggle-text">Sound: Off</span>
+        </button>
+
+        <div class="hero-content">
+            <div class="hero-content-inner" style="text-align: center; max-width: 800px;">
+
+                <div class="hero-badge reveal-up"
+                    style="display: inline-flex; align-items: center; gap: 8px; background: rgba(212,162,76,0.15); border: 1px solid rgba(212,162,76,0.3); border-radius: var(--radius-full); padding: 6px 16px; margin-bottom: var(--space-md);">
+                    <span
+                        style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-gold); display: inline-block;"></span>
+                    <span
+                        style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.1em;">
+                        IDCT Project Digital Showcase</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="hero-title-line hero-title-line-1">Empowering Chanang Hill</span>
+                    <span class="hero-title-line hero-title-line-2"
+                        style="font-size: clamp(2.5rem, 5vw, 4.5rem);">Through
+                        Digital Innovation</span>
+                </h1>
+
+                <p class="hero-subtitle">Exploring the Intersection of <strong>Sports Tourism</strong> and
+                    <strong>Community
+                        Empowerment</strong>
+                </p>
+
+                <div class="hero-actions"
+                    style="margin-top: var(--space-xl); opacity: 0; animation: fadeInUp 0.8s var(--ease-out) 1.5s forwards;">
+                    <a href="#heritage" class="btn btn-primary">Explore the Journey ↓</a>
+                    <a href="https://chanang-hill.vercel.app/" target="_blank" class="btn btn-secondary">Launch Live
+                        Experience</a>
+                </div>
+            </div>
+
+
+
+            <!-- Hero Particles -->
+            <canvas id="hero-particles" class="hero-particles"></canvas>
+    </section>
+
+    <!-- ============ SECTION 1: HERITAGE & INTRODUCTION ============ -->
+    <section class="section section-heritage" id="heritage">
+
+        <!-- Decorative Topo Background -->
+        <div class="heritage-topo-overlay"></div>
+
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-number">01</span>
+                <span class="label-text">The Heritage</span>
+                <span class="label-line"></span>
+            </div>
+
+            <h2 class="section-heading reveal-up">Before the Code,<br>There Was the <em>Hill</em></h2>
+
+            <div class="heritage-grid">
+
+                <!-- Left Column: History Flow -->
+                <div class="heritage-history-flow">
+                    <p class="section-subheading reveal-up" style="max-width: 680px;">For generations, Chanang Hill
+                        stood in
+                        quiet reverence as known only to the people who walked its trails barefoot, who read the jungle
+                        like a
+                        language, and who never needed a website to know its worth.</p>
+
+                    <div class="heritage-timeline">
+                        <!-- Stage 1: The Past -->
+                        <div class="heritage-stage reveal-up" style="--delay: 0.1s">
+                            <div class="heritage-stage-marker">
+                                <div class="heritage-stage-dot"></div>
+                                <div class="heritage-stage-line"></div>
+                            </div>
+                            <div class="heritage-stage-content">
+                                <span class="heritage-stage-label">The Roots</span>
+                                <h3 class="heritage-stage-title">A Hill Known Only by Footprints</h3>
+                                <p class="heritage-stage-text">Long before GPS coordinates or trail ratings, Chanang
+                                    Hill was a
+                                    sacred passage through the Crocker Range, navigated by the Dusun community of
+                                    Bingkor
+                                    village through oral tradition and inherited memory.</p>
+                            </div>
+                        </div>
+
+                        <!-- Stage 2: The Foundation -->
+                        <div class="heritage-stage reveal-up" style="--delay: 0.2s">
+                            <div class="heritage-stage-marker">
+                                <div class="heritage-stage-dot"></div>
+                                <div class="heritage-stage-line"></div>
+                            </div>
+                            <div class="heritage-stage-content">
+                                <span class="heritage-stage-label">The Foundation</span>
+                                <h3 class="heritage-stage-title">Hands That Built What Maps Couldn't Show</h3>
+                                <p class="heritage-stage-text">A group of local hikers carved three distinct trails
+                                    through the dense landscape, where Trail A, Trail B, and Trail C were created
+                                    entirely through community effort. The summit at 718 metres is no longer
+                                    unreachable,
+                                    it is an invitation for all to explore.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Stage 3: The Present -->
+                        <div class="heritage-stage heritage-stage-present reveal-up" style="--delay: 0.3s">
+                            <div class="heritage-stage-marker">
+                                <div class="heritage-stage-dot heritage-stage-dot-active"></div>
+                            </div>
+                            <div class="heritage-stage-content">
+                                <span class="heritage-stage-label">The Present</span>
+                                <h3 class="heritage-stage-title">Where Heritage Meets Horizon</h3>
+                                <p class="heritage-stage-text">Today, Chanang Hill stands as one of Keningau's most
+                                    promising
+                                    eco-tourism assets. But the mountain alone wasn't enough. It needed a voice. It
+                                    needed to be found.</p>
+                                <div class="heritage-stage-cta">
+                                    <span class="heritage-cta-text">This is where the digital journey begins ↓</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sticky Visual Gallery -->
+                <div class="heritage-visual-column reveal-up" style="--delay: 0.4s">
+
+                    <!-- Artifact 1: The Early Days -->
+                    <div class="artifact-card" style="--rotation: -2deg">
+                        <div class="artifact-media">
+                            <img src="public/early.JPEG" alt="Early Chanang Hill" class="artifact-img">
+                        </div>
+                        <div class="artifact-caption">
+                            <span>The Genesis: Chanang Hill five months after its official opening.</span>
+                            <span class="artifact-label">History</span>
+                        </div>
+                    </div>
+
+                    <!-- Artifact 2: The Community -->
+                    <div class="artifact-card" style="--rotation: 3deg">
+                        <div class="artifact-media">
+                            <img src="public/community.JPEG" alt="Community Trail Repair" class="artifact-img">
+                        </div>
+                        <div class="artifact-caption">
+                            <span>Shared Stewardship: Local community members repairing the heritage trails.</span>
+                            <span class="artifact-label">Community</span>
+                        </div>
+                    </div>
+
+                    <!-- Artifact 3: The Golden Hour -->
+                    <div class="artifact-card" style="--rotation: -1deg">
+                        <div class="artifact-media">
+                            <img src="public/sunrise.JPEG" alt="Chanang Hill Sunrise" class="artifact-img">
+                        </div>
+                        <div class="artifact-caption">
+                            <span>The Golden Hour: A breathtaking sunrise illuminating the path forward.</span>
+                            <span class="artifact-label">Summit</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 2: THE CHALLENGE ============ -->
+    <section class="section section-challenge" id="challenge">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-number">02</span>
+                <span class="label-text">The Challenge</span>
+                <span class="label-line"></span>
+            </div>
+
+            <div class="challenge-grid">
+                <!-- Left: Challenge Metrics -->
+                <div class="challenge-stats reveal-up">
+                    <div class="stat-card">
+                        <div class="stat-fog"></div>
+                        <span class="stat-label">01. Discovery Status | UNMANAGED</span>
+                        <div class="stat-value">Fragmented Brand</div>
+                        <p class="stat-desc">The lack of an official digital authority leaves the Chanang brand
+                            fragmented. This prevents the hill from reaching its full potential as a world-class tourism
+                            landmark.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-fog"></div>
+                        <span class="stat-label">02. Booking Method | MANUAL</span>
+                        <div class="stat-value">Scaling Bottleneck</div>
+                        <p class="stat-desc">Inefficient DM-based coordination creates a massive scaling bottleneck.
+                            This technical friction limits visitor volume and the potential spending power entering the
+                            Bingkor region.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-fog"></div>
+                        <span class="stat-label">03. Economic Leakage | DISCONNECTED</span>
+                        <div class="stat-value">Invisible Economy</div>
+                        <p class="stat-desc">Bingkor's local businesses and Takiding weavers remain digitally
+                            invisible.
+                            Without a platform, tourists "pass through" without a gateway to discover or support the
+                            local economy.</p>
+                    </div>
+                    <div class="stat-card stat-card-highlight">
+                        <div class="stat-fog"></div>
+                        <span class="stat-label">04. Resource Oversight | UNTRACKED</span>
+                        <div class="stat-value">Unmonitored Growth</div>
+                        <p class="stat-desc">The absence of a data-managed system means environmental and community
+                            impact is unmonitored. This unmanaged growth threatens the long-term prosperity of the
+                            entire district.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Narrative -->
+                <div class="challenge-narrative reveal-up" style="--delay: 0.2s">
+                    <h2 class="challenge-heading">Bridging the Divide: From <em>Highlands</em> to Digital Excellence
+                    </h2>
+                    <p class="challenge-text">
+                        Keningau, in Sabah's interior, sits on an untapped goldmine of tourism potential. While Chanang
+                        Hill is a natural masterpiece, its fragmented digital presence leads to <strong>Economic
+                            Leakage</strong>.
+                    </p>
+                    <p class="challenge-text">
+                        A famous hill without a unified platform means that while visitor numbers may grow, the
+                        financial profit fails to reach the surrounding <strong>Bingkor community</strong>. The
+                        challenge was to build a digital bridge that captures this value ensuring that the hill's fame
+                        directly fuels the prosperity of every local entrepreneur and artisan.
+                    </p>
+
+                    <!-- IDCT Framework Bridge -->
+                    <div class="idct-framework-new">
+                        <h4 class="framework-title">Why this is the right "IDCT" approach:</h4>
+                        <div class="framework-flow-new">
+                            <div class="framework-step-new">
+                                <div class="step-icon-new">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path d="M3 12h3m12 0h3M12 3v3m0 12v3" />
+                                    </svg>
+                                </div>
+                                <span class="step-label-new">Identify</span>
+                            </div>
+                            <div class="step-arrow-new">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                            <div class="framework-step-new">
+                                <div class="step-icon-new">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                                        <path d="M9 3v18M3 9h18" />
+                                    </svg>
+                                </div>
+                                <span class="step-label-new">Digitize</span>
+                            </div>
+                            <div class="step-arrow-new">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                            <div class="framework-step-new">
+                                <div class="step-icon-new">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0" />
+                                    </svg>
+                                </div>
+                                <span class="step-label-new">Connect</span>
+                            </div>
+                            <div class="step-arrow-new">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                            <div class="framework-step-new">
+                                <div class="step-icon-new">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                    </svg>
+                                </div>
+                                <span class="step-label-new">Transform</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Immersive Before & After Comparison -->
+            <div class="comparison-slider-container reveal-up">
+                <div class="comparison-slider" id="comparisonSlider">
+
+                    <!-- BEFORE SIDE: The Digital Fog -->
+                    <div class="comparison-before">
+                        <div class="comparison-content-wrapper">
+                            <div class="comparison-header">
+                                <span class="state-label">Legacy State</span>
+                                <h4>The Digital Fog</h4>
+                            </div>
+                            <div class="impact-cards">
+                                <div class="impact-mini-card">
+                                    <div class="mini-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                            <circle cx="12" cy="12" r="3" />
+                                            <line x1="1" y1="1" x2="23" y2="23" />
+                                        </svg>
+                                    </div>
+                                    <div class="mini-text">
+                                        <strong>Invisible Potential</strong>
+                                        <p>Stunning highlands hidden from the global digital reach.</p>
+                                    </div>
+                                </div>
+                                <div class="impact-mini-card">
+                                    <div class="mini-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                            <line x1="16" y1="2" x2="16" y2="6" />
+                                            <line x1="8" y1="2" x2="8" y2="6" />
+                                            <line x1="3" y1="10" x2="21" y2="10" />
+                                        </svg>
+                                    </div>
+                                    <div class="mini-text">
+                                        <strong>Manual Friction</strong>
+                                        <p>Relianace on paper logs and physical visitor coordination.</p>
+                                    </div>
+                                </div>
+                                <div class="impact-mini-card">
+                                    <div class="mini-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                            <circle cx="9" cy="7" r="4" />
+                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        </svg>
+                                    </div>
+                                    <div class="mini-text">
+                                        <strong>Silent Heritage</strong>
+                                        <p>Cultural stories locked within the local community.</p>
+                                    </div>
+                                </div>
+                                <div class="impact-mini-card">
+                                    <div class="mini-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="mini-text">
+                                        <strong>Economic Leakage</strong>
+                                        <p>Local artisans and businesses remain digitally invisible to visitors.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AFTER SIDE: The Digital Awakening -->
+                    <div class="comparison-after" id="comparisonAfter">
+                        <div class="comparison-content-wrapper">
+                            <div class="comparison-header">
+                                <span class="state-label">IDCT Vision</span>
+                                <h4>Digital Awakening</h4>
+                            </div>
+                            <div class="impact-cards">
+                                <div class="impact-mini-card">
+                                    <div class="mini-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <line x1="2" y1="12" x2="22" y2="12" />
+                                            <path
+                                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                        </svg>
+                                    </div>
+                                    <div class="mini-text">
+                                        <strong>Global Beacon</strong>
+                                        <p>A unified digital gateway connecting the hill to the world.</p>
+                                    </div>
+                                </div>
+                                <div class="impact-mini-card">
+                                    <div class="mini-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                            <polyline points="22 4 12 14.01 9 11.01" />
+                                        </svg>
+                                    </div>
+                                    <div class="mini-text">
+                                        <strong>Operational Flow</strong>
+                                        <p>QR-powered check-ins and real-time admin dashboards.</p>
+                                    </div>
+                                </div>
+                                <div class="impact-mini-card">
+                                    <div class="mini-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                        </svg>
+                                    </div>
+                                    <div class="mini-text">
+                                        <strong>Living Legacy</strong>
+                                        <p>Digital storytelling preserving community roots forever.</p>
+                                    </div>
+                                </div>
+                                <div class="impact-mini-card">
+                                    <div class="mini-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                            <path d="M12 17v-4m-2 2h4"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="mini-text">
+                                        <strong>Unified Prosperity</strong>
+                                        <p>A direct digital bridge connecting tourists to local businesses.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-handle" id="comparisonHandle">
+                        <div class="handle-line"></div>
+                        <div class="handle-circle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============ SECTION 3: THE HIGHLANDS EXPERIENCE ============ -->
+    <section class="section section-experience" id="experience">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-number">03</span>
+                <span class="label-text">The Highlands Experience</span>
+                <span class="label-line"></span>
+            </div>
+
+            <h2 class="section-heading reveal-up">Nature as the <em>Primary</em><br>Destination</h2>
+            <p class="section-subheading reveal-up" style="margin-left: 0; margin-right: auto; text-align: left;">Beyond
+                the digital interface lies the physical challenge of the
+                Bornean highlands, offering a diverse trekking experience across <strong> Trail A, Trail B, </strong>
+                and <strong>Trail C.</strong>
+            </p>
+
+            <!-- Activity Tab Navigation -->
+            <div class="exp-tabs-container reveal-up" style="--delay: 0.1s">
+                <div class="exp-tabs">
+                    <button class="exp-tab active" data-exp-tab="adventure">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                        Adventure
+                    </button>
+                    <button class="exp-tab" data-exp-tab="nature">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v8" />
+                            <path d="m4.93 4.93 1.41 1.41" />
+                            <path d="M2 12h8" />
+                            <path d="m4.93 19.07 1.41-1.41" />
+                            <path d="M12 22v-8" />
+                            <path d="m19.07 19.07-1.41-1.41" />
+                            <path d="M22 12h-8" />
+                            <path d="m19.07 4.93-1.41 1.41" />
+                            <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" />
+                        </svg>
+                        Scenic & Nature
+                    </button>
+                    <button class="exp-tab" data-exp-tab="learning">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        Learning
+                    </button>
+                    <button class="exp-tab" data-exp-tab="relax">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 3v3a2 2 0 0 1-2 2H3" />
+                            <path d="M21 8h-3a2 2 0 0 1-2-2V3" />
+                            <path d="M3 16h3a2 2 0 0 1 2 2v3" />
+                            <path d="M16 21v-3a2 2 0 0 1 2-2h3" />
+                        </svg>
+                        Relax & Leisure
+                    </button>
+                </div>
+            </div>
+
+            <!-- Activity Panels -->
+            <div class="exp-panels reveal-up" style="--delay: 0.2s">
+
+                <!-- Adventure Panel -->
+                <div class="exp-panel active" id="exp-panel-adventure">
+                    <div class="exp-activity-grid exp-activity-grid-3">
+                        <!-- Hiking -->
+                        <div class="exp-activity-card">
+                            <div class="exp-activity-img">
+                                <img src="public/hiking.jpeg" alt="Hiking Chanang Hill" class="exp-img">
+                                <span class="exp-activity-badge">Most Popular</span>
+                            </div>
+                            <div class="exp-activity-body">
+                                <h3>Hiking / Trekking</h3>
+                                <p>The main trail experience to the pristine peak of Chanang Hill. Challenge yourself
+                                    through dense Bornean rainforest.</p>
+                            </div>
+                        </div>
+                        <!-- Night Trek -->
+                        <div class="exp-activity-card">
+                            <div class="exp-activity-img">
+                                <img src="public/night%20hiking.jpeg" alt="Night Hiking" class="exp-img">
+                                <span class="exp-activity-badge">Evening</span>
+                            </div>
+                            <div class="exp-activity-body">
+                                <h3>Night Jungle Trek</h3>
+                                <p>Trek under low-light jungle conditions. Experience the entirely different nocturnal
+                                    ecosystem of the Crocker Range.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nature Panel -->
+                <div class="exp-panel" id="exp-panel-nature">
+                    <div class="exp-activity-grid exp-activity-grid-3">
+                        <!-- Sunrise -->
+                        <div class="exp-activity-card">
+                            <div class="exp-activity-img">
+                                <img src="public/sunset.jpeg" alt="Sunset Chasing" class="exp-img">
+                                <span class="exp-activity-badge">Scenic</span>
+                            </div>
+                            <div class="exp-activity-body">
+                                <h3>Sunrise / Sunset Chasing</h3>
+                                <p>Catch early morning views from the top, or witness breathtaking golden hour scenery
+                                    and silhouettes in the late afternoon.</p>
+                            </div>
+                        </div>
+                        <!-- Stargazing -->
+                        <div class="exp-activity-card">
+                            <div class="exp-activity-img">
+                                <img src="public/stargazing.jpeg" alt="Stargazing" class="exp-img">
+                                <span class="exp-activity-badge">Night</span>
+                            </div>
+                            <div class="exp-activity-body">
+                                <h3>Stargazing</h3>
+                                <p>Clear night sky observation from the peak, far away from city light pollution.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Panel -->
+                <div class="exp-panel" id="exp-panel-learning">
+                    <div class="exp-activity-grid exp-activity-grid-3">
+                        <!-- Guided Exploration -->
+                        <div class="exp-activity-card">
+                            <div class="exp-activity-img">
+                                <img src="public/guided%20exploration.jpeg" alt="Guided Exploration" class="exp-img">
+                                <span class="exp-activity-badge">Educational</span>
+                            </div>
+                            <div class="exp-activity-body">
+                                <h3>Guided Exploration</h3>
+                                <p>Learn insider technical knowledge and survival insights from our highly experienced
+                                    local hikers and guides.</p>
+                            </div>
+                        </div>
+                        <!-- Flora & Fauna -->
+                        <div class="exp-activity-card">
+                            <div class="exp-activity-img">
+                                <img src="public/flora.jpeg" alt="Flora and Fauna" class="exp-img">
+                                <span class="exp-activity-badge">Nature</span>
+                            </div>
+                            <div class="exp-activity-body">
+                                <h3>Flora & Fauna Observation</h3>
+                                <p>Identify exotic jungle plants, fascinating insects, and the beautiful wildlife
+                                    endemic exclusively to this region.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Relax & Leisure Panel -->
+                <div class="exp-panel" id="exp-panel-relax">
+                    <div class="exp-activity-grid exp-activity-grid-3">
+
+                        <!-- Picnic -->
+                        <div class="exp-activity-card">
+                            <div class="exp-activity-img">
+                                <img src="public/picnic.jpeg" alt="Picnic" class="exp-img">
+                                <span class="exp-activity-badge">Relax</span>
+                            </div>
+                            <div class="exp-activity-body">
+                                <h3>Picnic</h3>
+                                <p>Set down a mat and enjoy a relaxing meal surrounded by the calm atmosphere of
+                                    pristine nature.</p>
+                            </div>
+                        </div>
+                        <!-- Camping -->
+                        <div class="exp-activity-card">
+                            <div class="exp-activity-img">
+                                <img src="public/camping.jpeg" alt="Camping" class="exp-img">
+                                <span class="exp-activity-badge">Stay</span>
+                            </div>
+                            <div class="exp-activity-body">
+                                <h3>Camping</h3>
+                                <p>Pitch a tent and sleep safely within the serene environment of the Chanang Hill
+                                    camping grounds.</p>
+                            </div>
+                        </div>
+                        <!-- Bandukan River -->
+                        <div class="exp-activity-card">
+                            <div class="exp-activity-img">
+                                <img src="public/bandukan%20river.jpeg" alt="Bandukan River" class="exp-img">
+                                <span class="exp-activity-badge">Nature</span>
+                            </div>
+                            <div class="exp-activity-body">
+                                <h3>Bandukan River</h3>
+                                <p>Cool off near the river crossing, enjoy the natural waterfall streams, and reconnect
+                                    with water nature.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 4: VOICES ============ -->
+    <section class="section section-voices" id="voices">
+        <div class="container">
+            <div class="section-label section-label-light reveal-up">
+                <span class="label-number">04</span>
+                <span class="label-text">Voices of Chanang Hill</span>
+                <span class="label-line"></span>
+            </div>
+
+            <h2 class="section-heading section-heading-light reveal-up">Human-Centric <em>Chronicles</em></h2>
+
+            <div class="voices-layout reveal-up" style="--delay: 0.15s">
+
+                <div class="voices-column-left">
+                    <!-- Video Player on the Left -->
+                    <div class="voices-video-container">
+                        <div class="custom-video-player" id="voicesVideoPlayer">
+                            <iframe class="main-interview-video" 
+                                src="https://www.youtube.com/embed/TOlBYaFV71c" 
+                                title="Voices of Chanang Hill"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                style="width: 100%; height: 100%; border-radius: var(--radius-md); background: #000; min-height: 360px;">
+                            </iframe>
+                        </div>
+                    </div>
+                    <br><br><br><br>
+                    <!-- Nature Quote (Centered below video) -->
+                    <div class="nature-quote-container" style="text-align: center; margin-top: 20px;">
+                        <p class="nature-quote"
+                            style="font-family: 'Dancing Script', cursive; font-style: italic; color: var(--accent-gold); font-size: clamp(1.2rem, 4vw, 1.8rem); margin: 0 auto;">
+                            "Leave nothing but footprint, take nothing but picture"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quotes on the Right -->
+                <div class="voices-quotes">
+                    <div class="voice-quote glass-card-dark">
+                        <div class="card-glow"></div>
+                        <div class="quote-icon-premium">“</div>
+                        <blockquote style="font-style: italic;">
+                            This hill has been part of our community for generations. Now, through this digital
+                            platform, the whole world can discover what makes Chanang Hill so special to us.
+                        </blockquote>
+                        <cite>
+                            <div class="cite-info">
+                                <span class="cite-name">- Chanang Hill Management</span>
+                                <span class="cite-role">Community Stakeholder</span>
+                            </div>
+                        </cite>
+                    </div>
+
+                    <div class="voice-quote glass-card-dark">
+                        <div class="card-glow"></div>
+                        <div class="quote-icon-premium">“</div>
+                        <blockquote style="font-style: italic;">
+                            I hope those who visit Chanang Hill carry home a feeling of calm, a gentle longing, and a
+                            renewed sense of peace.
+                        </blockquote>
+                        <cite>
+                            <div class="cite-info">
+                                <span class="cite-name">- Uncle Arai</span>
+                                <span class="cite-role">Community Stakeholder</span>
+                            </div>
+                        </cite>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section section-visitor-guide" id="visitor-guide"
+        style="background: var(--mist-white); position: relative; overflow: hidden;">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-number">05</span>
+                <span class="label-text">Essential Visitor Guide</span>
+                <span class="label-line"></span>
+            </div>
+
+            <div class="visitor-guide-refined-layout">
+                <div class="guide-header-content reveal-up">
+                    <h2 class="section-heading" style="text-align: left; margin-bottom: var(--space-md);">Plan Your
+                        <em>Journey</em>
+                    </h2>
+                    <p class="section-subheading" style="text-align: left; margin-left: 0; max-width: 600px;">Everything
+                        you need to know for a seamless trekking experience at Chanang Hill.</p>
+                </div>
+
+                <div class="guide-split-layout">
+                    <!-- Left Column: Immersive Visual -->
+                    <div class="guide-visual-side reveal-up">
+                        <div class="guide-image-window">
+                            <img src="public/bingkor.jpg" alt="Bingkor Keningau" class="guide-feature-img">
+                            <div class="guide-img-overlay">
+                                <span class="overlay-tag">718m Summit</span>
+                                <h3>Gateway to the Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Interactive Info Cards -->
+                    <div class="guide-info-side">
+                        <div class="guide-cards-inner-grid">
+                            <!-- Logistics Card -->
+                            <div class="guide-card reveal-up" style="--delay: 0.1s">
+                                <div class="guide-card-header">
+                                    <span class="guide-card-label">Operational Info</span>
+                                </div>
+                                <div class="guide-card-body">
+                                    <div class="info-row">
+                                        <span class="info-label">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2"
+                                                style="margin-right: 4px; opacity: 0.6;">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <polyline points="12 6 12 12 16 14" />
+                                            </svg>
+                                            Operation Time
+                                        </span>
+                                        <span class="info-value" style="text-align: right;">4:30 AM — 5:00 PM</span>
+                                    </div>
+                                    <div class="info-row" style="margin-bottom: 8px;">
+                                        <span class="info-label">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2"
+                                                style="margin-right: 4px; opacity: 0.6;">
+                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                                <circle cx="12" cy="10" r="3" />
+                                            </svg>
+                                            Location
+                                        </span>
+                                        <span class="info-value" style="text-align: right;">Bingkor, Keningau</span>
+                                    </div>
+                                    <a href="https://maps.app.goo.gl/aZ5urJoJVMS5xPUS7" target="_blank"
+                                        class="maps-link">
+                                        <span>View on Google Maps</span>
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line x1="10" y1="14" x2="21" y2="3" />
+                                        </svg>
+                                    </a>
+                                    <div class="info-row">
+                                        <span class="info-label">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2"
+                                                style="margin-right: 4px; opacity: 0.6;">
+                                                <rect x="1" y="3" width="15" height="13" />
+                                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                                                <circle cx="5.5" cy="18.5" r="2.5" />
+                                                <circle cx="18.5" cy="18.5" r="2.5" />
+                                            </svg>
+                                            Transport (4x4)
+                                        </span>
+                                        <span class="info-value" style="text-align: right;">RM 20 / one way</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pricing Card -->
+                            <div class="guide-card reveal-up" style="--delay: 0.2s">
+                                <div class="guide-card-header">
+                                    <span class="guide-card-label">Fees & Services</span>
+                                </div>
+                                <div class="guide-card-body">
+                                    <div class="info-row">
+                                        <span class="info-label">Adult Fee</span>
+                                        <span class="info-value">RM 5.00</span>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-label">Student</span>
+                                        <span class="info-value">RM 3.00</span>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-label">Child (< 9 yrs)</span>
+                                                <span class="info-value">FREE</span>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-label">Camping (8ft x 8ft)</span>
+                                        <span class="info-value">RM 10.00</span>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-label">Guide Service</span>
+                                        <span class="info-value">RM 20.00</span>
+                                    </div>
+                                    <div class="info-row-divider" style="margin-bottom: 0;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trail Card (Wide) -->
+                        <div class="guide-card guide-card-accent reveal-up"
+                            style="--delay: 0.3s; margin-top: var(--space-lg);">
+                            <div class="guide-card-header">
+                                <span class="guide-card-label">Trail Intelligence</span>
+                            </div>
+                            <div class="guide-card-body trail-flex-row">
+                                <div class="trail-item">
+                                    <div class="trail-header">
+                                        <span class="trail-name">Trail A</span>
+                                        <span class="trail-tag tag-challenging">Challenging</span>
+                                    </div>
+                                    <p class="trail-desc">5.0 KM • Jungle Trail</p>
+                                </div>
+                                <div class="trail-item">
+                                    <div class="trail-header">
+                                        <span class="trail-name">Trail B</span>
+                                        <span class="trail-tag tag-moderate">Moderate</span>
+                                    </div>
+                                    <p class="trail-desc">3.5 KM • Jungle Trail</p>
+                                </div>
+                                <div class="trail-item">
+                                    <div class="trail-header">
+                                        <span class="trail-name">Trail C</span>
+                                        <span class="trail-tag tag-moderate">Moderate</span>
+                                    </div>
+                                    <p class="trail-desc">3.0 KM • Road Trail</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </section>
+
+
+    <!-- ============ SECTION 6: THE SOLUTION ============ -->
+    <section class="section section-solution" id="solution">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-number">06</span>
+                <span class="label-text">The Solution</span>
+                <span class="label-line"></span>
+            </div>
+
+            <h2 class="section-heading reveal-up">An <em>Infrastructural</em><br>Transformation</h2>
+            <p class="section-subheading reveal-up" style="margin-left: 0; margin-right: auto; text-align: left;">We
+                engineered more than just a website. We built a scalable digital
+                ecosystem designed to sustain growth and streamline community operations.</p>
+
+            <div class="bento-layout reveal-up" style="--delay: 0.15s;">
+                <style>
+                    .bento-custom-grid {
+                        display: grid;
+                        grid-template-columns: repeat(12, 1fr);
+                        gap: var(--space-md);
+                    }
+
+                    .bento-card-tall {
+                        grid-column: span 12;
+                        grid-row: span 2;
+                    }
+
+                    .bento-card-medium {
+                        grid-column: span 12;
+                    }
+
+                    .bento-card-small {
+                        grid-column: span 12;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        padding: var(--space-md) var(--space-lg);
+                        aspect-ratio: 1 / 1;
+                    }
+
+                    .bento-card-small .media-placeholder {
+                        min-height: 48px;
+                        width: 48px;
+                        padding: 0;
+                        margin-bottom: var(--space-sm);
+                        border-radius: var(--radius-sm);
+                    }
+
+                    .bento-card-small h3 {
+                        font-size: var(--text-base);
+                        margin-bottom: 4px;
+                    }
+
+                    .bento-card-small p {
+                        font-size: var(--text-xs);
+                        margin: 0;
+                    }
+
+                    /* ==== COMPACT PERSONA DASHBOARD ==== */
+                    .persona-dashboard-nav {
+                        display: flex;
+                        justify-content: center;
+                        gap: var(--space-sm);
+                        margin-bottom: var(--space-lg);
+                    }
+
+                    .persona-nav-btn {
+                        background: #FFFFFF;
+                        border: 1px solid rgba(0, 0, 0, 0.05);
+                        padding: 10px 20px;
+                        border-radius: var(--radius-lg);
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 2px;
+                        min-width: 140px;
+                        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    }
+
+                    .persona-nav-btn.active {
+                        background: var(--forest-dark);
+                        border-color: var(--forest-dark);
+                        transform: translateY(-3px);
+                        box-shadow: 0 10px 20px rgba(15, 42, 29, 0.1);
+                    }
+
+                    .btn-num {
+                        font-family: var(--font-mono);
+                        font-size: 9px;
+                        color: var(--accent-gold);
+                        opacity: 0.6;
+                    }
+
+                    .btn-label {
+                        font-family: var(--font-heading);
+                        font-weight: 700;
+                        font-size: 13px;
+                        color: var(--forest-dark);
+                    }
+
+                    .persona-nav-btn.active .btn-label {
+                        color: #FFFFFF;
+                    }
+
+                    .persona-display-viewport {
+                        background: #FFFFFF;
+                        border-radius: var(--radius-xl);
+                        border: 1px solid rgba(0, 0, 0, 0.03);
+                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+                        min-height: 320px;
+                        /* Slimmer */
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    .persona-pane {
+                        display: none;
+                        padding: var(--space-xl) var(--space-2xl);
+                        animation: paneFadeIn 0.5s ease forwards;
+                        position: relative;
+                        /* Ensure children can be absolute */
+                        overflow: hidden;
+                    }
+
+                    .persona-pane.active {
+                        display: block;
+                    }
+
+                    @keyframes paneFadeIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(8px);
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                    .pane-content-grid {
+                        display: grid;
+                        grid-template-columns: 1fr 1.2fr;
+                        gap: var(--space-2xl);
+                        align-items: center;
+                        position: relative;
+                        z-index: 2;
+                    }
+
+
+
+                    .pane-persona-tag {
+                        font-family: var(--font-mono);
+                        font-size: 10px;
+                        color: var(--accent-gold);
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        margin-bottom: var(--space-sm);
+                    }
+
+                    .pane-ghost-bg {
+                        position: absolute;
+                        top: -10px;
+                        left: -5px;
+                        font-size: 80px;
+                        font-weight: 900;
+                        opacity: 0.25 !important;
+                        pointer-events: none;
+                        color: #D4A853 !important;
+                        /* Premium Gold */
+                        z-index: 1;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        line-height: 1;
+                    }
+
+                    .pane-quote {
+                        font-family: var(--font-heading);
+                        font-size: 20px;
+                        /* More compact */
+                        line-height: 1.3;
+                        color: var(--forest-dark);
+                        font-style: italic;
+                        border-left: 3px solid var(--accent-gold);
+                        padding-left: var(--space-lg);
+                        margin: 0;
+                    }
+
+                    .pane-tech-side {
+                        background: var(--forest-dark);
+                        padding: var(--space-lg);
+                        border-radius: var(--radius-lg);
+                        border: 1px solid var(--accent-gold);
+                        box-shadow: 0 10px 30px rgba(15, 42, 29, 0.2);
+                    }
+
+                    .pane-solution-label {
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        color: var(--accent-gold);
+                        opacity: 0.8;
+                        margin-bottom: 4px;
+                        letter-spacing: 1px;
+                    }
+
+                    .pane-tech-side h3 {
+                        font-family: var(--font-heading);
+                        color: var(--accent-gold);
+                        font-size: 18px;
+                        margin-bottom: var(--space-xs);
+                    }
+
+                    .pane-tech-side p {
+                        font-size: 13px;
+                        line-height: 1.5;
+                        color: rgba(255, 255, 255, 0.9);
+                        /* High contrast white */
+                    }
+
+                    .pane-tech-footer {
+                        display: flex;
+                        gap: 6px;
+                        margin-top: var(--space-md);
+                    }
+
+                    .tech-badge-mini {
+                        background: rgba(212, 168, 83, 0.1);
+                        color: var(--accent-gold);
+                        font-family: var(--font-mono);
+                        font-size: 9px;
+                        padding: 4px 10px;
+                        border-radius: 100px;
+                        border: 1px solid var(--accent-gold);
+                    }
+
+                    /* ==== KINETIC MOSAIC GALLERY ==== */
+                    .section-gallery {
+                        background: #FDF9F0;
+                        padding: var(--space-4xl) 0;
+                    }
+
+                    .gallery-grid {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-auto-rows: 200px;
+                        gap: var(--space-md);
+                        margin-top: var(--space-2xl);
+                    }
+
+                    .footer-logos-row {
+                        display: flex;
+                        gap: var(--space-md);
+                        align-items: center;
+                        flex-wrap: nowrap;
+                        margin-top: var(--space-xs);
+                    }
+
+                    .gallery-item {
+                        position: relative;
+                        border-radius: var(--radius-xl);
+                        overflow: hidden;
+                        background: #FFFFFF;
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+                        cursor: pointer;
+                        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    }
+
+                    .gallery-item img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    }
+
+                    /* Grid Span Variations */
+                    .g-tall {
+                        grid-row: span 2;
+                    }
+
+                    .g-wide {
+                        grid-column: span 2;
+                    }
+
+                    .gallery-item:hover {
+                        transform: translateY(-10px) scale(1.02);
+                        box-shadow: 0 30px 60px rgba(15, 42, 29, 0.12);
+                        z-index: 10;
+                    }
+
+                    .gallery-item:hover img {
+                        transform: scale(1.1);
+                    }
+
+                    .gallery-overlay {
+                        position: absolute;
+                        inset: 0;
+                        background: linear-gradient(to top, rgba(15, 42, 29, 0.8), transparent);
+                        display: flex;
+                        align-items: flex-end;
+                        padding: var(--space-xl);
+                        opacity: 0;
+                        transition: opacity 0.4s ease;
+                    }
+
+                    .gallery-item:hover .gallery-overlay {
+                        opacity: 1;
+                    }
+
+                    .gallery-overlay span {
+                        color: var(--accent-gold);
+                        font-family: var(--font-heading);
+                        font-weight: 700;
+                        font-size: 18px;
+                        transform: translateY(10px);
+                        transition: transform 0.4s ease;
+                    }
+
+                    .gallery-item:hover .gallery-overlay span {
+                        transform: translateY(0);
+                    }
+
+                    @media (max-width: 992px) {
+                        .gallery-grid {
+                            grid-template-columns: repeat(2, 1fr);
+                        }
+
+                        .g-wide {
+                            grid-column: span 1;
+                        }
+                    }
+
+                    @media (max-width: 576px) {
+                        .gallery-grid {
+                            grid-template-columns: 1fr;
+                            grid-auto-rows: 250px;
+                        }
+
+                        .g-tall {
+                            grid-row: span 1;
+                        }
+                    }
+
+                    @media (max-width: 992px) {
+                        .pane-content-grid {
+                            grid-template-columns: 1fr;
+                            gap: var(--space-xl);
+                        }
+
+                        .persona-nav-btn {
+                            min-width: 120px;
+                            padding: var(--space-sm) var(--space-md);
+                        }
+                    }
+
+                    @media (min-width: 768px) {
+                        .bento-card-tall {
+                            grid-column: span 7;
+                            grid-row: span 2;
+                        }
+
+                        .bento-card-medium {
+                            grid-column: span 5;
+                        }
+
+                        .bento-card-small {
+                            grid-column: span 5;
+                        }
+                    }
+
+                    @media (min-width: 1024px) {
+                        .bento-card-small {
+                            grid-column: span 3;
+                        }
+                    }
+
+                    .bento-card-media {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    .bento-img {
+                        transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                    }
+
+                    .bento-card:hover .bento-img {
+                        transform: scale(1.05);
+                    }
+
+                    .bento-card-tag {
+                        position: absolute;
+                        top: var(--space-md);
+                        right: var(--space-md);
+                        background: var(--mist-white);
+                        color: var(--accent-gold);
+                        padding: 4px 12px;
+                        font-size: 10px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        border-radius: var(--radius-full);
+                        z-index: 2;
+                        border: 1px solid rgba(212, 168, 83, 0.3);
+                    }
+                </style>
+                <div class="bento-custom-grid">
+                    <!-- Left: Tall Card -->
+                    <div class="bento-card bento-card-tall">
+                        <div class="bento-card-media" style="height: 400px;">
+                            <div class="bento-card-tag">Core Platform</div>
+                            <div class="bento-media-container" style="height: 100%; overflow: hidden;">
+                                <img src="public/screen.gif" alt="Tourist Website Platform" class="bento-img"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="bento-card-content">
+                            <h3>Tourist Website Platform</h3>
+                            <p>Bringing a modernized digital experience to Chanang Hill with a comprehensive information
+                                hub, featuring real-time weather integration, high-resolution galleries, and essential
+                                visitor tools.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Top: Medium Card -->
+                    <div class="bento-card bento-card-medium">
+                        <div class="bento-card-media" style="height: 180px;">
+                            <div class="bento-card-tag">Innovation</div>
+                            <div class="bento-media-container" style="height: 100%; overflow: hidden;">
+                                <img src="public/Map3D.gif" alt="3D Interactive Trail Map" class="bento-img"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="bento-card-content">
+                            <h3>3D Interactive Trail Map</h3>
+                            <p>Explore the terrain with 3D elevation maps, featuring interactive waypoints and essential
+                                trail data to help you visualize every climb before you start.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Bottom: Medium Card -->
+                    <div class="bento-card bento-card-medium">
+                        <div class="bento-card-media" style="height: 180px;">
+                            <div class="bento-card-tag">Innovation</div>
+                            <div class="bento-media-container" style="height: 100%; overflow: hidden;">
+                                <img src="public/360.gif" alt="360 Trail Viewer" class="bento-img"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="bento-card-content">
+                            <h3>360° Trail Viewer</h3>
+                            <p>An immersive virtual pre-hike experience featuring stunning panoramic photography of key
+                                checkpoints, allowing hikers to scout essential trail milestones before they arrive.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Row: 4 Small Cards -->
+                    <div class="bento-card bento-card-small">
+                        <div class="media-placeholder">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3>AI Chatbots</h3>
+                        <p>Intelligent visitor assistant</p>
+                    </div>
+
+                    <div class="bento-card bento-card-small">
+                        <div class="media-placeholder">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.5" />
+                                <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.5" />
+                                <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <h3>Booking System</h3>
+                        <p>Streamlined reservation flow</p>
+                    </div>
+
+                    <div class="bento-card bento-card-small">
+                        <div class="media-placeholder">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3>E-Certs</h3>
+                        <p>Post-hike digital achievement</p>
+                    </div>
+
+                    <div class="bento-card bento-card-small">
+                        <div class="media-placeholder">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="1.5" />
+                                <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <h3>Admin Dashboard</h3>
+                        <p>Complete management suite</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personas Section -->
+            <div class="personas-wrapper reveal-up" style="margin-top: var(--space-3xl);">
+                <h3 class="personas-title">Serving the <em>Community & Visitors</em></h3>
+                <!-- Persona Dashboard Selector -->
+                <div class="persona-dashboard-nav">
+                    <button class="persona-nav-btn active" data-persona="explorer">
+                        <span class="btn-num">01</span>
+                        <span class="btn-label">The Explorer</span>
+                    </button>
+                    <button class="persona-nav-btn" data-persona="creator">
+                        <span class="btn-num">02</span>
+                        <span class="btn-label">The Creator</span>
+                    </button>
+                    <button class="persona-nav-btn" data-persona="local">
+                        <span class="btn-num">03</span>
+                        <span class="btn-label">The Community</span>
+                    </button>
+                </div>
+
+                <!-- Persona Display Area -->
+                <div class="persona-display-viewport">
+
+                    <!-- 01: EXPLORER -->
+                    <div class="persona-pane active" id="pane-explorer">
+                        <div class="pane-content-grid">
+                            <div class="pane-human-side">
+                                <div class="pane-persona-tag">Adventure Seeker</div>
+                                <h4 class="pane-ghost-bg">DISCOVER</h4>
+                                <blockquote class="pane-quote">
+                                    "I want to experience the peak without the fear of getting lost or missing the best
+                                    views."
+                                </blockquote>
+                            </div>
+                            <div class="pane-tech-side">
+                                <div class="pane-solution-label">The Solution</div>
+                                <h3>Interactive 3D Terrain Intelligence</h3>
+                                <p>Providing high-precision digital navigation and terrain insights. This ensures hikers
+                                    have the confidence to explore Sabah’s interior safely, using verified data to
+                                    find
+                                    the best viewpoints while minimizing the risk of getting lost.</p>
+                                <div class="pane-tech-footer">
+                                    <div class="tech-badge-mini">3D Mapping</div>
+                                    <div class="tech-badge-mini">GPS Verification</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 02: CREATOR -->
+                    <div class="persona-pane" id="pane-creator">
+                        <div class="pane-content-grid">
+                            <div class="pane-human-side">
+                                <div class="pane-persona-tag">Digital Tourist</div>
+                                <h4 class="pane-ghost-bg">INSPIRE</h4>
+                                <blockquote class="pane-quote">
+                                    "I’m looking for the perfect shot and a way to verify and share my Borneo
+                                    journey."
+                                </blockquote>
+                            </div>
+                            <div class="pane-tech-side">
+                                <div class="pane-solution-label">The Solution</div>
+                                <h3>Visual Achievement & 360° Viewers</h3>
+                                <p>Leveraging cinematic 360° trail previews and providing Digital E-Certificates upon
+                                    completion. This allows visitors to professionally document their hike and share
+                                    their achievement with the world, turning every hiker into a digital ambassador for
+                                    Chanang Hill.</p>
+                                <div class="pane-tech-footer">
+                                    <div class="tech-badge-mini">360° VR</div>
+                                    <div class="tech-badge-mini">E-Certificates</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 03: COMMUNITY -->
+                    <div class="persona-pane" id="pane-local">
+                        <div class="pane-content-grid">
+                            <div class="pane-human-side">
+                                <div class="pane-persona-tag">Local Enterprise</div>
+                                <h4 class="pane-ghost-bg">EMPOWER</h4>
+                                <blockquote class="pane-quote">
+                                    "We need a way to manage our businesses and bookings without a technical
+                                    background."
+                                </blockquote>
+                            </div>
+                            <div class="pane-tech-side">
+                                <div class="pane-solution-label">The Solution</div>
+                                <h3>The Heritage Admin Dashboard</h3>
+                                <p>A simplified digital command center that manages bookings and promotes Bingkor's
+                                    local businesses. By providing an easy way to showcase traditional crafts like the
+                                    Takiding, it ensures that the hill's online fame translates directly into physical
+                                    sales and income for the local community.</p>
+                                <div class="pane-tech-footer">
+                                    <div class="tech-badge-mini">Booking Engine</div>
+                                    <div class="tech-badge-mini">Craft Commerce</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ SECTION 7: TECHNICAL INNOVATION ============ -->
+    <section class="section section-tech" id="tech">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-number">07</span>
+                <span class="label-text">Technical Innovation</span>
+                <span class="label-line"></span>
+            </div>
+
+            <h2 class="section-heading reveal-up">Built with <em>Rigorous</em> Purpose</h2>
+            <p class="section-subheading reveal-up" style="margin-left: 0; margin-right: auto; text-align: left;">
+                Bridging the gap between <strong>traditional heritage</strong> and
+                <strong>modern digital authority</strong> through purpose-built innovation.
+            </p>
+
+            <!-- Feature Showcase Tabs -->
+            <div class="tech-showcase reveal-up" style="--delay: 0.15s">
+                <div class="tech-tabs">
+                    <button class="tech-tab active" data-tab="3dmap">3D Trail Map</button>
+                    <button class="tech-tab" data-tab="viewer360">360° Viewer</button>
+                    <button class="tech-tab" data-tab="aichat">AI Chatbot</button>
+                    <button class="tech-tab" data-tab="responsive">Responsive UI</button>
+                </div>
+
+                <div class="tech-panels">
+                    <div class="tech-panel active" id="panel-3dmap">
+                        <div class="tech-panel-media">
+                            <div class="tech-video-container"
+                                style="height: 100%; border-radius: var(--radius-md); overflow: hidden; background: #000;">
+                                <video autoplay muted loop playsinline
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                    <source src="public/3Dmaps.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="tech-panel-content">
+                            <h3>Interactive 3D Terrain Visualization</h3>
+                            <p>An immersive three-dimensional representation of Chanang Hill's trail system, featuring
+                                real elevation data, interactive waypoints marking key landmarks, and dynamic terrain
+                                rendering. Visitors can explore the trail virtually before arriving, helping them
+                                prepare for their hike and set expectations.</p>
+                            <div class="tech-detail">
+                                <span class="tech-detail-label">User Value</span>
+                                <span class="tech-detail-text">Hikers arrive prepared — they know what to expect,
+                                    reducing safety incidents and improving satisfaction.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-panel" id="panel-viewer360">
+                        <div class="tech-panel-media">
+                            <div class="tech-video-container"
+                                style="height: 100%; border-radius: var(--radius-md); overflow: hidden; background: #000;">
+                                <video autoplay muted loop playsinline
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                    <source src="public/360vid.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="tech-panel-content">
+                            <h3>Panoramic Virtual Trail Experience</h3>
+                            <p>Using high-resolution panoramic photography captured at key points along the trail,
+                                visitors can immerse themselves in a 360-degree virtual walkthrough. This feature
+                                transforms the browsing experience into a preview adventure, creating excitement and
+                                confidence for first-time visitors.</p>
+                            <div class="tech-detail">
+                                <span class="tech-detail-label">User Value</span>
+                                <span class="tech-detail-text">Virtual exploration builds excitement and removes
+                                    uncertainty for first-time visitors.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-panel" id="panel-aichat">
+                        <div class="tech-panel-media">
+                            <div class="tech-video-container"
+                                style="height: 100%; border-radius: var(--radius-md); overflow: hidden; background: #000;">
+                                <video autoplay muted loop playsinline
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                    <source src="public/AIChatBot.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="tech-panel-content">
+                            <h3>Intelligent Visitor Assistant</h3>
+                            <p>An AI-powered chatbot that answers visitor queries about trail conditions, difficulty
+                                levels, equipment needs, weather, booking availability, and local attractions. It serves
+                                as a 24/7 digital concierge, reducing the burden on local operators while ensuring
+                                tourists receive accurate, instant information.</p>
+                            <div class="tech-detail">
+                                <span class="tech-detail-label">User Value</span>
+                                <span class="tech-detail-text">Instant answers, 24/7 availability — no waiting, no
+                                    language barriers.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-panel" id="panel-responsive">
+                        <div class="tech-panel-media">
+                            <div class="tech-video-container"
+                                style="height: 100%; border-radius: var(--radius-md); overflow: hidden; background: #000;">
+                                <video autoplay muted loop playsinline
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                    <source src="public/Ui.MP4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="tech-panel-content">
+                            <h3>Fully Responsive Design</h3>
+                            <p>Every component of the platform adapts seamlessly from desktop monitors to mobile phones.
+                                Given that most tourists browse on their phones while traveling, mobile-first design was
+                                a core principle — not an afterthought. The interface remains beautiful and functional
+                                at every viewport.</p>
+                            <div class="tech-detail">
+                                <span class="tech-detail-label">User Value</span>
+                                <span class="tech-detail-text">Perfect experience on any device — hikers access
+                                    information on-the-go.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Comparison Table -->
+            <div style="text-align: center; margin-bottom: var(--space-xl);" class="reveal-up">
+                <h3 class="section-heading" style="font-size: var(--text-3xl);">Defining the <em>Digital Authority
+                        Gap</em></h3>
+                <p class="section-subheading"
+                    style="margin-top: -10px; opacity: 0.7; text-align: center; margin-inline: auto;">
+                    How Chanang Hill transcends typical local tourism standards.
+                </p>
+            </div>
+            <div class="matrix-container reveal-up">
+                <!-- Header -->
+                <div class="matrix-header">
+                    <div class="matrix-col matrix-param">Analysis Parameter</div>
+                    <div class="matrix-col matrix-legacy">Legacy Baseline</div>
+                    <div class="matrix-col matrix-opt">Optimized Authority</div>
+                </div>
+
+                <!-- Row 1 -->
+                <div class="matrix-row">
+                    <div class="matrix-col matrix-param">
+                        <div class="matrix-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 12h4l3-9 5 18 3-9h5" />
+                            </svg>
+                        </div>
+                        <div class="matrix-text">
+                            <strong>Digital Presence</strong>
+                            <span>Visibility & Reach</span>
+                        </div>
+                    </div>
+                    <div class="matrix-col matrix-legacy">None / Facebook Pages</div>
+                    <div class="matrix-col matrix-opt">
+                        <div class="matrix-pill">Full Premium Web App</div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="matrix-row">
+                    <div class="matrix-col matrix-param">
+                        <div class="matrix-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                                <line x1="9" y1="3" x2="9" y2="21"></line>
+                                <line x1="15" y1="3" x2="15" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div class="matrix-text">
+                            <strong>Trail Navigation</strong>
+                            <span>User Guidance</span>
+                        </div>
+                    </div>
+                    <div class="matrix-col matrix-legacy">Static Images</div>
+                    <div class="matrix-col matrix-opt">
+                        <div class="matrix-pill">Interactive 3D & 360° View</div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="matrix-row">
+                    <div class="matrix-col matrix-param">
+                        <div class="matrix-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="matrix-text">
+                            <strong>Visitor Engagement</strong>
+                            <span>Information Access</span>
+                        </div>
+                    </div>
+                    <div class="matrix-col matrix-legacy">Manual Queries</div>
+                    <div class="matrix-col matrix-opt">
+                        <div class="matrix-pill">AI Chatbot Support</div>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="matrix-row">
+                    <div class="matrix-col matrix-param">
+                        <div class="matrix-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div class="matrix-text">
+                            <strong>Achievements</strong>
+                            <span>Milestone Tracking</span>
+                        </div>
+                    </div>
+                    <div class="matrix-col matrix-legacy">Paper Certificates</div>
+                    <div class="matrix-col matrix-opt">
+                        <div class="matrix-pill">Automated E-Certificates</div>
+                    </div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="matrix-row">
+                    <div class="matrix-col matrix-param">
+                        <div class="matrix-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                        </div>
+                        <div class="matrix-text">
+                            <strong>Operations</strong>
+                            <span>Admin Workflow</span>
+                        </div>
+                    </div>
+                    <div class="matrix-col matrix-legacy">Pen and Paper</div>
+                    <div class="matrix-col matrix-opt">
+                        <div class="matrix-pill">Admin & Cloud Analytics</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="tech-stack reveal-up"><br><br><br><br>
+                <h3 class="tech-stack-title">Technology Stack</h3>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-item">
+                        <div class="tech-stack-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 18l6-6-6-6" />
+                                <path d="M8 6l-6 6 6 6" />
+                            </svg>
+                        </div>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-stack-item">
+                        <div class="tech-stack-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <line x1="9" y1="3" x2="9" y2="21" />
+                            </svg>
+                        </div>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-stack-item">
+                        <div class="tech-stack-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="4 17 10 11 4 5" />
+                                <line x1="12" y1="19" x2="20" y2="19" />
+                            </svg>
+                        </div>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-stack-item">
+                        <div class="tech-stack-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                <line x1="12" y1="22.08" x2="12" y2="12" />
+                            </svg>
+                        </div>
+                        <span>Three.js</span>
+                    </div>
+                    <div class="tech-stack-item">
+                        <div class="tech-stack-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                            </svg>
+                        </div>
+                        <span>Supabase</span>
+                    </div>
+                    <div class="tech-stack-item">
+                        <div class="tech-stack-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                            </svg>
+                        </div>
+                        <span>Vite</span>
+                    </div>
+                    <div class="tech-stack-item"
+                        style="grid-column: 1 / -1; background: rgba(255,255,255,0.02); text-align: left; align-items: flex-start; padding: var(--space-md);">
+                        <h4
+                            style="color: var(--accent-gold); font-size: var(--text-sm); margin-bottom: var(--space-xs); text-transform: uppercase;">
+                            Why this stack matters</h4>
+                        <ul
+                            style="color: var(--text-muted); font-size: var(--text-sm); line-height: 1.5; padding-left: var(--space-sm);">
+                            <li style="margin-bottom: 8px;"><strong>3D Map (Three.js):</strong> Reduces uncertainty,
+                                increasing conversion rates for first-time visitors.</li>
+                            <li style="margin-bottom: 8px;"><strong>Supabase (BaaS):</strong> Provides highly scalable
+                                backend, ensuring the community doesn't incur massive server costs.</li>
+                            <li><strong>React / TS:</strong> Long-term maintainability for when the project scales to
+                                regional hubs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Methodology callout -->
+        </div>
+    </section>
+
+
+
+    <!-- ============ SECTION 8: COMMUNITY IMPACT ============ -->
+    <section class="section section-impact" id="impact">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-number">08</span>
+                <span class="label-text">Community Impact</span>
+                <span class="label-line"></span>
+            </div>
+
+            <h2 class="section-heading reveal-up">Empowering the <em>Community</em> </h2>
+            <p class="section-subheading reveal-up" style="margin-left: 0; margin-right: auto; text-align: left;">This
+                project is not just about technology — it's about creating
+                sustainable opportunities for the people of Keningau.</p>
+
+            <!-- Impact Block 1 -->
+            <div class="impact-block reveal-up">
+                <div class="impact-block-visual">
+                    <div class="impact-visual-container">
+                        <img src="public/guider.JPG" alt="Employment & Livelihoods">
+                    </div>
+                </div>
+                <div class="impact-block-content">
+
+                    <h3>Employment & Sustainable Livelihoods</h3>
+                    <p>By establishing a professional digital presence, Chanang Hill gains significantly higher
+                        visibility among the hiking community. This increased foot traffic directly stimulates the local
+                        economy, creating a rising demand for experienced local guides and providing sustainable income
+                        opportunities for the Keningau community.</p>
+                    <div class="impact-highlight">
+                        <span class="impact-highlight-label">Key Outcome</span>
+                        <span class="impact-highlight-text">Empowering local guides through increased digital visibility
+                            and tourism demand.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Block 2 -->
+            <div class="impact-block impact-block-reverse reveal-up">
+                <div class="impact-block-visual">
+                    <div class="impact-visual-container">
+                        <img src="public/culture.PNG" alt="Bingkor Enterprise">
+                    </div>
+                </div>
+                <div class="impact-block-content">
+
+                    <h3>Bingkor Enterprise & Cultural Preservation</h3>
+                    <p>The platform promotes indigenous crafts and local enterprises throughout the Bingkor area,
+                        providing direct income to community artisans. By digitizing traditional products like the
+                        hand-woven <strong>Takiding</strong>, it preserves indigenous craftsmanship while opening new
+                        global market channels.</p>
+                    <div class="impact-highlight">
+                        <span class="impact-highlight-label">Key Outcome</span>
+                        <span class="impact-highlight-text">Digital visibility for local Bingkor artisans and authentic
+                            cultural products.</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Impact Block 3: Digital Skills -->
+            <div class="impact-block reveal-up">
+                <div class="impact-block-visual">
+                    <div class="impact-visual-container">
+                        <img src="public/digital.jpeg" alt="Digital Literacy Training">
+                    </div>
+                </div>
+                <div class="impact-block-content">
+
+                    <h3>Bridging the Digital Divide</h3>
+                    <p>This project didn't just build a product for the community — it built <strong>capacity
+                            within</strong> the community. The local management team gained hands-on experience
+                        operating a modern web platform, managing dashboards, and interacting with AI integration. This
+                        approach demystified technology and transferred crucial digital literacy skills.</p>
+                    <div class="impact-highlight">
+                        <span class="impact-highlight-label">Key Outcome</span>
+                        <span class="impact-highlight-text">Tech literacy uplift and long-term digital
+                            independence</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Vision -->
+            <div class="impact-block impact-block-reverse reveal-up" style="margin-top: var(--space-2xl);">
+                <div class="impact-block-visual">
+                    <div class="impact-visual-container">
+                        <img src="public/run.JPG" alt="Future Vision">
+                    </div>
+                </div>
+                <div class="impact-block-content">
+
+                    <h3>Trail Running Events & Seasonal Tourism</h3>
+                    <p>The digital infrastructure we've built lays the groundwork for future <strong>trail running
+                            events</strong> that could drive seasonal revenue for local homestays, food vendors, and
+                        transport operators. With sponsorship and community support, Chanang Hill has the potential to
+                        become a recognized trail running destination, creating an annual economic cycle for the
+                        community.</p>
+                    <div class="impact-highlight impact-highlight-future">
+                        <span class="impact-highlight-label">Vision</span>
+                        <span class="impact-highlight-text">Annual trail events generating sustainable seasonal income
+                            for the community</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SDG Alignment -->
+            <div class="sdg-section reveal-up">
+                <h3 class="section-heading reveal-up" style="font-size: var(--text-3xl);">Driven by <em>Global
+                        Standards</em></h3>
+                <p class="section-subheading reveal-up"
+                    style="margin-bottom: var(--space-xl); margin-left: 0; margin-right: auto; text-align: left;">This
+                    project directly
+                    contributes to four UN Sustainable Development Goals</p>
+                <div class="sdg-grid">
+                    <div class="sdg-card" style="--sdg-color: #A21942">
+                        <div class="sdg-info">
+                            <h4><b>Decent Work & Economic Growth</b></h4>
+                            <p>Creating employment and income opportunities for local guides and artisans through
+                                digital tourism infrastructure.</p>
+                        </div>
+                        <div class="sdg-icon-box"
+                            style="width: 80px; height: 80px; border-radius: var(--radius-sm); overflow: hidden;">
+                            <img src="public/sdg8.png" alt="SDG 8"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="sdg-card" style="--sdg-color: #F99D26">
+                        <div class="sdg-info">
+                            <h4><b>Sustainable Cities & Communities</b></h4>
+                            <p>Making Keningau's natural heritage accessible and sustainable through responsible digital
+                                tourism management.</p>
+                        </div>
+                        <div class="sdg-icon-box"
+                            style="width: 80px; height: 80px; border-radius: var(--radius-sm); overflow: hidden;">
+                            <img src="public/sdg11.png" alt="SDG 11"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="sdg-card" style="--sdg-color: #BF8B2E">
+                        <div class="sdg-info">
+                            <h4><b>Responsible Consumption</b></h4>
+                            <p>Promoting sustainable tourism practices that respect the environment and benefit local
+                                communities directly.</p>
+                        </div>
+                        <div class="sdg-icon-box"
+                            style="width: 80px; height: 80px; border-radius: var(--radius-sm); overflow: hidden;">
+                            <img src="public/sdg12.png" alt="SDG 12"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="sdg-card" style="--sdg-color: #56C02B">
+                        <div class="sdg-info">
+                            <h4><b>Life on Land</b></h4>
+                            <p>Raising awareness of Chanang Hill's biodiversity and encouraging conservation through
+                                education on the platform.</p>
+                        </div>
+                        <div class="sdg-icon-box"
+                            style="width: 80px; height: 80px; border-radius: var(--radius-sm); overflow: hidden;">
+                            <img src="public/sdg15.png" alt="SDG 15"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ SECTION 9: THE GALLERY ============ -->
+    <br><br><br><br><br>
+    <section class="section section-gallery reveal-up" id="gallery">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-number">09</span>
+                <span class="label-text">The Gallery</span>
+                <span class="label-line"></span>
+            </div>
+
+            <h2 class="section-heading reveal-up">Behind the <em>Scenes</em></h2>
+            <p class="section-subheading reveal-up" style="margin-left: 0; margin-right: auto; text-align: left;">A
+                visual retrospective of the project's journey, from technical
+                mapping to community empowerment.</p>
+
+            <div class="gallery-grid">
+                <!-- Row 1 & 2 -->
+                <div class="gallery-item g-tall reveal-up">
+                    <img src="public/journey.JPEG" alt="Project Journey">
+                    <div class="gallery-overlay">
+                        <span>Project Journey</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item g-wide reveal-up">
+                    <img src="public/horizon.png" alt="Summit View">
+                    <div class="gallery-overlay">
+                        <span>Summit View</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal-up">
+                    <img src="public/takiding.JPEG" alt="Takiding Artisan">
+                    <div class="gallery-overlay">
+                        <span>Takiding Artisan</span>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="gallery-item reveal-up">
+                    <img src="public/meeting.jpg" alt="Community Meeting">
+                    <div class="gallery-overlay">
+                        <span>Community Meeting</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal-up">
+                    <img src="public/drone%202.jpg" alt="Trail Mapping">
+                    <div class="gallery-overlay">
+                        <span>Trail Mapping</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item g-tall reveal-up">
+                    <img src="public/flower.JPEG" alt="Nature Close-up">
+                    <div class="gallery-overlay">
+                        <span>Nature Close-up</span>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="gallery-item g-wide reveal-up">
+                    <img src="public/purple.JPEG" alt="Chanang Hill Vista">
+                    <div class="gallery-overlay">
+                        <span>Chanang Hill Vista</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal-up">
+                    <img src="public/drone.jpg" alt="Aerial Mapping Team">
+                    <div class="gallery-overlay">
+                        <span>Aerial Mapping Team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+
+    <!-- ============ SECTION 10: FUTURE OF CHANANG HILL ============ -->
+    <section class="section section-vision-new" id="vision">
+        <div class="container">
+
+            <div class="section-label reveal-up section-label-light">
+                <span class="label-number">10</span>
+                <span class="label-text">Future Vision</span>
+                <span class="label-line"></span>
+            </div>
+
+            <h2 class="section-heading section-heading-light reveal-up">The Three Pillars of <em>Legacy</em></h2>
+            <p class="section-subheading section-subheading-light reveal-up"
+                style="max-width: 680px; margin-left: 0; margin-right: auto; text-align: left;">Beyond the pilot,
+                we are building a generational vision to safeguard the biological integrity and cultural heritage of
+                Chanang Hill.</p>
+
+            <div class="vision-grid-new">
+
+                <!-- Pillar 1: The Eco-Sanctuary -->
+                <div class="glass-card-dark reveal-up" style="--delay: 0.1s">
+                    <div class="card-glow"></div>
+                    <div class="vision-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <span class="vision-card-tag">Ecological Restoration</span>
+                    <h3 class="vision-card-title">1. The Eco-Sanctuary</h3>
+                    <p class="vision-card-narrative">
+                        A definitive long-term reforestation initiative dedicated to preserving the biological integrity
+                        of the Crocker Range. This pillar prioritizes the establishment of native seedling banks and
+                        zero-waste operational protocols to safeguard endemic wildlife habitats. <br><br>Central to this
+                        vision is the <span class="vision-card-highlight">'Plant-as-you-Hike'</span> program, allowing
+                        visitors to sponsor and personally plant native seedlings in designated restoration zones along
+                        Trail B and C, ensuring a lasting environmental legacy.
+                    </p>
+                </div>
+
+                <!-- Pillar 2: The Digital Frontier -->
+                <div class="glass-card-dark reveal-up" style="--delay: 0.2s">
+                    <div class="card-glow"></div>
+                    <div class="vision-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2l9 4.9V17L12 22l-9-5.1V6.9L12 2z" />
+                            <path d="M12 22v-5" />
+                            <path d="M12 2v5" />
+                            <path d="M3 7l9 5 9-5" />
+                        </svg>
+                    </div>
+                    <span class="vision-card-tag">Digital Innovation</span>
+                    <h3 class="vision-card-title">2. The Digital Frontier</h3>
+                    <p class="vision-card-narrative">
+                        The integration of cutting-edge technology to redefine sustainable tourism and trail safety.
+                        This framework utilizes <span class="vision-card-highlight">WebAR-driven navigation</span>,
+                        interactive digital education markers, and real-time IoT environmental monitoring. <br><br>These
+                        innovations provide a more secure, data-informed, and immersive exploration of the Borneo
+                        rainforest while minimizing human impact on sensitive ecological zones.
+                    </p>
+                </div>
+
+                <!-- Pillar 3: The Bingkor Enterprise Hub -->
+                <div class="glass-card-dark reveal-up" style="--delay: 0.3s">
+                    <div class="card-glow"></div>
+                    <div class="vision-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                            <path d="M3 6h18" />
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
+                    </div>
+                    <span class="vision-card-tag">Social Craftsmanship</span>
+                    <h3 class="vision-card-title">3. The Bingkor Enterprise Hub</h3>
+                    <p class="vision-card-narrative">
+                        A localized economic engine designed to build a direct bridge between global tourism and the
+                        artisan heritage of Bingkor. This hub facilitates the incubation of youth-led
+                        eco-startups, ranging from organic local provisions to digital storytelling, while providing a
+                        dedicated platform for master weavers to showcase traditional crafts such as the <span
+                            class="vision-card-highlight">Takiding</span>.<br><br> This model ensures community-wide
+                        prosperity
+                        and the preservation of indigenous skills for future generations.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 8: LIVE PREVIEW & CTA ============ -->
+    <section class="section section-preview reveal-up" id="preview">
+        <div class="container">
+            <h2 class="section-heading">The Future of Tourism is <em>Now Live</em></h2>
+            <p class="section-subheading" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                Experience the digital transformation of Chanang Hill. Explore the platform built to empower local
+                guides and connect communities.
+            </p>
+
+            <div class="preview-mockups">
+                <!-- Desktop Mockup -->
+                <div class="mockup-desktop">
+                    <div class="mockup-header">
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <div class="mockup-url">chanang-hill.vercel.app</div>
+                    </div>
+                    <a href="https://chanang-hill.vercel.app/" target="_blank" class="mockup-screen-link">
+                        <div class="mockup-screen">
+                            <img src="public/website.png" alt="Desktop Platform Preview"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Mobile Mockup -->
+                <div class="mockup-mobile">
+                    <div class="mockup-speaker"></div>
+                    <a href="https://chanang-hill.vercel.app/" target="_blank" class="mockup-screen-link">
+                        <div class="mockup-screen">
+                            <img src="public/mobile.jpg" alt="Mobile Platform Preview"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </a>
+                    <div class="mockup-button"></div>
+                </div>
+            </div>
+
+            <div class="cta-container">
+                <a href="https://chanang-hill.vercel.app/" target="_blank" class="btn btn-cta-premium">Explore the
+                    Platform</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 8: FOOTER ============ -->
+    <footer class="footer-modern">
+        <div class="container footer-grid">
+            <!-- Column 1: Branding -->
+            <div class="footer-col branding-col">
+                <h3 class="footer-logo">IDCT Project</h3>
+                <p class="footer-desc">Redefining Keningau's community and sport tourism through digital innovation.</p>
+                <div class="footer-logos-row">
+                    <div class="footer-logo-container">
+                        <img src="public/UMS%20Logo%201.png" alt="UMS" class="footer-logo-img">
+                    </div>
+                    <div class="footer-logo-container">
+                        <img src="public/IDCT%201.png" alt="IDCT" class="footer-logo-img">
+                    </div>
+                    <div class="footer-logo-container">
+                        <img src="public/Chanang%20Hill%201.png" alt="Chanang Hill" class="footer-logo-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Navigation -->
+            <div class="footer-col nav-col">
+                <h4 class="footer-heading-sm">Quick Links</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="#hero">Overview</a></li>
+                    <li><a href="#heritage">The Heritage</a></li>
+                    <li><a href="#tech">Technology</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#vision">Future Vision</a></li>
+                    <li><a href="#voices">Community Voices</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Social Links -->
+            <div class="footer-col social-col">
+                <h4 class="footer-heading-sm">Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/p/Chanang-hill-100068581574113/" target="_blank"
+                        class="social-btn" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/chananghill.ums?igsh=MXZkZTZuNjRoNGZmYg==" target="_blank"
+                        class="social-btn" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@chananghill.idct?_r=1&_t=ZS-95q4l4w6nEy" target="_blank"
+                        class="social-btn" aria-label="TikTok">
+                        <svg width="20" height="20" viewBox="0 0 448 512" fill="currentColor">
+                            <path
+                                d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 3: Project Info -->
+            <div class="footer-col info-col">
+                <h4 class="footer-heading-sm">About IDCT</h4>
+                <p class="footer-desc">Impact Digital Community Tourism empowers forgotten trails by connecting them to
+                    the global digital economy.</p>
+                <a href="#tech" class="footer-cta-btn">Learn More</a>
+            </div>
+
+            <!-- Column 4: Team & Contact -->
+            <div class="footer-col contact-col">
+                <h4 class="footer-heading-sm">Team Beast</h4>
+                <div class="team-logo-box">
+                    <img src="public/beast.PNG" alt="Team Beast" class="footer-logo-img">
+                </div>
+                <div class="contact-info">
+                    <p>Sabah, Malaysia</p>
+                    <p><a href="https://chanang-hill.vercel.app/" target="_blank">teambeast.dev</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <div class="bottom-tagline">Building Sustainable Ecosystems</div>
+                <div class="bottom-copyright">&copy; 2026 Team Beast. All rights reserved.</div>
+                <div class="bottom-org">Universiti Malaysia Sabah</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ MASCOT FEEDBACK WIDGET ============ -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1KX8sO2oVDZdZ_hErnIoGIatJfgYt-zgQNk3K9yDVtfIfww/viewform"
+        target="_blank" class="mascot-widget" aria-label="Leave a review">
+        <div class="mascot-bubble">
+            Hi there!👋<br>Don't forget to leave us a review!<br><strong>Click me!</strong>
+        </div>
+        <div class="mascot-img-container">
+            <img src="public/fox.PNG" alt="Chanang Fox Mascot" class="mascot-img">
+        </div>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Persona Dashboard Toggling
+            const personaBtns = document.querySelectorAll('.persona-nav-btn');
+            const personaPanes = document.querySelectorAll('.persona-pane');
+
+            personaBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetPersona = btn.getAttribute('data-persona');
+
+                    // Update buttons
+                    personaBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    // Update panes
+                    personaPanes.forEach(pane => {
+                        pane.classList.remove('active');
+                        if (pane.id === `pane-${targetPersona}`) {
+                            pane.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Mascot Reveal/Hide Logic
+            const mascot = document.querySelector('.mascot-widget');
+            const previewSection = document.querySelector('#preview');
+            const footer = document.querySelector('footer');
+
+            if (mascot && previewSection && footer) {
+                const revealObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            mascot.classList.add('visible');
+                        } else {
+                            // Optional: Hide again if they scroll way back up
+                            if (window.scrollY < previewSection.offsetTop) {
+                                mascot.classList.remove('visible');
+                            }
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                const hideObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            mascot.classList.remove('visible');
+                        } else if (window.scrollY > previewSection.offsetTop && window.scrollY < footer.offsetTop) {
+                            mascot.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                revealObserver.observe(previewSection);
+                hideObserver.observe(footer);
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

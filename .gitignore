@@ -1,0 +1,12 @@
+node_modules
+.DS_Store
+*.local
+.vercel
+# Ignore any other large video files if they exist
+public/*.mp4
+# But keep the IDCT Rev.mp4 and others we need
+!public/IDCT%20Rev.mp4
+!public/3Dmaps.mp4
+!public/360vid.mp4
+!public/AIChatBot.mp4
+!public/Ui.MP4
