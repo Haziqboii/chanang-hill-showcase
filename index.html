@@ -1430,8 +1430,17 @@
                         border: 1px solid rgba(212, 168, 83, 0.3);
                     }
                         @media (max-width: 768px) {
+                            .bento-card {
+                                padding: var(--space-md) !important;
+                            }
+                            
+                            .bento-card-media {
+                                margin: calc(var(--space-md) * -1) !important;
+                                margin-bottom: var(--space-md) !important;
+                            }
+
                             .bento-card-media-tall {
-                                height: 280px !important;
+                                height: 250px !important;
                             }
                         }
                     }
