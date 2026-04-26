@@ -2882,6 +2882,16 @@ cite {
         justify-content: space-between;
     }
 
+    .nav-hamburger {
+        display: flex !important;
+        cursor: pointer;
+        z-index: 9999; /* Max priority */
+        background: rgba(15, 42, 29, 0.4);
+        padding: 10px;
+        border-radius: 50%;
+        backdrop-filter: blur(5px);
+    }
+
     .stat-divider {
         display: none;
     }
@@ -5514,7 +5524,7 @@ i {
     margin-left: -120px !important;
     margin-bottom: -30px !important;
     overflow: hidden !important;
-    animation: float-mobile 6s ease-in-out infinite !important;
+    animation: none !important; /* Grounded frame */
 }
     overflow: hidden !important;
 }

@@ -545,8 +545,18 @@ function initHeroVideo() {
             toggleText.textContent = 'Sound: Off';
         } else {
             toggleText.textContent = 'Sound: On';
-            // Ensure video is playing
             video.play();
         }
     });
+
+    // Autoplay Fail-safe
+    const startVideo = () => {
+        video.play().catch(err => {
+            console.log("Autoplay waiting for interaction...");
+        });
+    };
+
+    window.addEventListener('load', startVideo);
+    document.addEventListener('touchstart', startVideo, { once: true });
+    document.addEventListener('click', startVideo, { once: true });
 }
