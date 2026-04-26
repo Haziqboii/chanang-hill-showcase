@@ -635,22 +635,46 @@ button {
 .nav-hamburger {
     display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 6px;
     cursor: pointer;
     padding: 10px;
-    background: transparent;
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    width: 44px;
+    height: 44px;
+    z-index: 1001;
+    transition: all 0.3s var(--ease-out);
 }
 
 .nav-hamburger span {
-    width: 24px;
+    width: 22px;
     height: 2px;
-    background: var(--forest-dark);
-    transition: all 0.3s ease;
+    background: #FFFFFF;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
 }
 
-.navbar.scrolled .nav-hamburger span {
-    background: #FFFFFF;
+.nav-hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background: var(--accent-gold);
+}
+
+.nav-hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.nav-hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background: var(--accent-gold);
+}
+
+.navbar.scrolled .nav-hamburger {
+    background: rgba(15, 42, 29, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Mobile Responsive */
@@ -671,21 +695,31 @@ button {
     }
 
     .nav-links {
-        display: none;
         position: fixed;
-        top: 70px;
+        top: 0;
         left: 0;
         width: 100%;
-        height: calc(100vh - 70px);
-        background: #FFFFFF;
+        height: 100vh;
+        display: flex;
+        background: rgba(8, 28, 21, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
-        padding: 40px 20px;
-        overflow-y: auto;
-        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 40px;
+        gap: 25px;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .nav-links.active {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .nav-chapter {
@@ -713,8 +747,18 @@ button {
     }
 
     .nav-link {
-        padding: 10px 0;
-        font-size: 18px;
+        padding: 15px 0;
+        font-size: 24px;
+        color: #FFFFFF !important;
+        font-family: var(--font-heading);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link.active {
+        color: var(--accent-gold) !important;
     }
 
     .nav-cta-link {
@@ -2433,45 +2477,8 @@ cite {
     }
 
     /* Mobile Nav */
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(10, 26, 14, 0.97);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: var(--space-md);
-        z-index: 999;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
     .nav-cta-link {
         display: none !important;
-    }
-
-    .nav-links .nav-link.nav-cta-link {
-        display: block !important;
-        width: 100%;
-        max-width: 200px;
-        margin-bottom: var(--space-md);
-    }
-
-    .nav-link {
-        font-size: var(--text-lg);
-        padding: 12px 24px;
-    }
-
-    .nav-hamburger {
-        display: flex;
     }
 
     .hero-meta {
@@ -2521,15 +2528,17 @@ cite {
     }
 
     .timeline {
-        padding-left: 40px;
+        padding-left: 20px;
+        margin-right: 15px;
     }
 
     .timeline-line {
-        left: 14px;
+        left: 10px;
     }
 
     .timeline-marker {
-        left: -33px;
+        left: -20px;
+        transform: scale(0.8);
     }
 
     .device-mockups {
@@ -5564,17 +5573,23 @@ i {
     .preview-mockups {
         flex-direction: column !important;
         align-items: center !important;
-        gap: 40px !important;
+        gap: 30px !important;
+        margin: 40px auto !important;
+    }
+
+    .mockup-desktop {
+        width: 100% !important;
+        height: 220px !important;
+        flex: none !important;
+        border-bottom: 8px solid #1a1a1a !important;
     }
 
     .mockup-mobile {
         margin-left: 0 !important;
         margin-bottom: 0 !important;
-    }
-
-    .mockup-desktop {
-        width: 100% !important;
-        border-bottom: 12px solid #1a1a1a !important;
+        width: 180px !important;
+        height: 380px !important;
+        flex: none !important;
     }
 }
 

@@ -1063,7 +1063,7 @@
                         align-items: flex-start;
                         justify-content: center;
                         padding: var(--space-md) var(--space-lg);
-                        aspect-ratio: 1 / 1;
+                        min-height: 180px;
                     }
 
                     .bento-card-small .media-placeholder {
@@ -1429,11 +1429,17 @@
                         z-index: 2;
                         border: 1px solid rgba(212, 168, 83, 0.3);
                     }
+                        @media (max-width: 768px) {
+                            .bento-card-media-tall {
+                                height: 280px !important;
+                            }
+                        }
+                    }
                 </style>
                 <div class="bento-custom-grid">
                     <!-- Left: Tall Card -->
                     <div class="bento-card bento-card-tall">
-                        <div class="bento-card-media" style="height: 400px;">
+                        <div class="bento-card-media bento-card-media-tall" style="height: 400px;">
                             <div class="bento-card-tag">Core Platform</div>
                             <div class="bento-media-container" style="height: 100%; overflow: hidden;">
                                 <img src="public/screen.gif" alt="Tourist Website Platform" class="bento-img"
@@ -2043,7 +2049,7 @@
             <div class="impact-block reveal-up">
                 <div class="impact-block-visual">
                     <div class="impact-visual-container">
-                        <img src="public/digital.jpeg" alt="Digital Literacy Training">
+                        <img src="public/digital.JPEG" alt="Digital Literacy Training">
                     </div>
                 </div>
                 <div class="impact-block-content">
